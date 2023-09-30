@@ -5,4 +5,3 @@ Config
 ---------------------
 
 .. automodule:: dp.config
-

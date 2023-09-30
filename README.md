@@ -7,4 +7,3 @@ demo project
 ## Installation
 
 `make install`
-

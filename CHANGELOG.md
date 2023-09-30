@@ -8,5 +8,3 @@
 ### Fixed
 
 - remove bug [#1](https://github.com/joamatab/demo_project3/issues/1)
-
-

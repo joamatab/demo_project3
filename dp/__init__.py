@@ -8,6 +8,4 @@ def fibonacci(n):
     """Return the nth number in the Fibonacci sequence."""
     if n < 0:
         raise ValueError("n must be >= 0")
-    if n < 2:
-        return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    return n if n < 2 else fibonacci(n - 1) + fibonacci(n - 2)

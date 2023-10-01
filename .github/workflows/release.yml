@@ -26,13 +26,13 @@ jobs:
         uses: actions/checkout@v3
       - name: Generate Changelog
         run: echo "# Good things have arrived" > ${{ github.workspace }}-CHANGELOG.txt
+      - name: Install dependencies
+        run: |
+          pip install .
+          pip freeze > requirements.txt
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
-          body_path: ${{ github.workspace }}-CHANGELOG.md
-          # note you'll typically need to create a personal access token
-          # with permissions to create releases in the other repo
-          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
-        env:
-          GITHUB_REPOSITORY: my_gh_org/my_gh_repo
+          fail_on_unmatched_files: false
+          files: |
+            requirements.txt

@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "9260cbc9c84c06022993bfbcc42fdbf0305c5b8e"
+    rev: "v5.0.0"
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -15,7 +15,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.1.6"
+    rev: "v0.7.0"
     hooks:
       - id: ruff
         args: [ --fix, --exit-non-zero-on-fix ]
@@ -23,7 +23,7 @@ repos:
 
 
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: 953faa6870f6663ac0121ab4a800f1ce76bca31f
+    rev: v0.10.0.1
     hooks:
       - id: shellcheck
 
@@ -36,13 +36,13 @@ repos:
   #         - "pydantic"
 
   - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-    rev: d2425a62376c2197448cce2f825d5a0c3926b862
+    rev: v2.14.0
     hooks:
       - id: pretty-format-toml
         args: [--autofix]
 
   - repo: https://github.com/aristanetworks/j2lint.git
-    rev: 742a25ef5da996b9762f167ebae9bc8223e8382e
+    rev: v1.1.0
     hooks:
       - id: j2lint
         types: [file]
@@ -50,7 +50,7 @@ repos:
         args: [--extensions, "j2,yml,yaml", --ignore, jinja-statements-delimiter, jinja-statements-indentation, --]
         exclude: .github/.*
   - repo: https://github.com/codespell-project/codespell
-    rev: 38bc4a97f6e22827e86526148efa38f1044a97f8
+    rev: v2.3.0
     hooks:
       - id: codespell
         additional_dependencies:
